@@ -1,0 +1,109 @@
+header {
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    // background-color: rgba(0,0,0, 0.1);
+}
+
+nav a {
+    display: block;
+    padding: 0 10px;
+    color: #FFF;
+    // font-size:20px;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+// nav a:hover { 
+// 	background-color: #000000; 
+// }
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 200px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+
+li>a:after {
+    content: ' +';
+}
+
+li>a:only-child:after {
+    content: '';
+}
+
+.menu {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    &__logo {
+
+        height: 40px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    // &__item {
+    //     // padding-right: 35px;
+    // }
+
+    &__link {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.btn {
+    background: #EC7F00;
+    border-radius: 20px;
+}
